@@ -19,7 +19,7 @@ body {
 }
 section {
   background-color: var(--dark-green);
-  width: 50%;
+  width: 60%;
   /* max-width: 90%; */
   margin: auto;
   text-align: center;

@@ -19,22 +19,23 @@ body {
 }
 section {
   background-color: var(--dark-green);
-  width: 60%;
+  width: 50%;
   /* max-width: 90%; */
   margin: auto;
   text-align: center;
 }
 section input {
-  width: 70%;
+  width: 60%;
   height: 2rem;
   color: black;
 }
 section h1 {
   color: var(--light-green);
+  padding: 1rem;
 }
 section button {
-  width: 30%;
-  height: 2rem;
+  width: 20%;
+  height: 2.5rem;
   font-size: 1rem;
   font-weight: bold;
   background-color: var(--light-green);

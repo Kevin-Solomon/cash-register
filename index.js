@@ -12,17 +12,22 @@ const notes = [2000,500,100,20,10,5,1]
 const noteCounter = Array(7).fill(0)
 
 nextBtn.addEventListener("click", () => {
-  if (billAmt.value !== "") {
+  if (billAmt.value === "" || Number(billAmt.value)<0) {
+    billError.innerText = "Enter valid Bill amt"
+  }
+  else{
     cashDiv.style.display = "block"
     billError.innerText = ""
     nextBtn.style.display = "none"
-  } else {
-    billError.innerText = "Enter valid Bill amt"
   }
 })
 
 checkBtn.addEventListener("click", () => {
-  const noteCounter = Array(7).fill(0)
+  const noteCounter = Array(7).fill(0);
+  if(cashAmt.value === "" || Number(cashAmt.value)<0){
+    cashError.innerText = "Enter valid cash amt"
+    return
+  }
   let returnChange = parseInt(cashAmt.value) - parseInt(billAmt.value);
   console.log(returnChange, cashAmt.value, billAmt)
   if (returnChange < 0) {

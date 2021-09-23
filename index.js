@@ -24,8 +24,14 @@ nextBtn.addEventListener("click", () => {
 
 checkBtn.addEventListener("click", () => {
   const noteCounter = Array(7).fill(0);
+  cashError.innerText = ""
+  billError.innerText = ""
   if(cashAmt.value === "" || Number(cashAmt.value)<0){
     cashError.innerText = "Enter valid cash amt"
+    return
+  }
+  if(billAmt.value === "" || Number(billAmt.value)<0){
+    billError.innerText = "Enter valid Bill amt"
     return
   }
   let returnChange = parseInt(cashAmt.value) - parseInt(billAmt.value);
